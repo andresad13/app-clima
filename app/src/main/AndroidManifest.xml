@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.andresad13.clima_prueba_bold">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,9 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ClimaPrueba_Bold">
-
         <activity
-            android:name=".SplashActivity"
+            android:name=".view.CityWeatherActivity"
+            android:exported="true"
+            android:theme="@style/splashTheme"/>
+        <activity
+            android:name=".view.SplashActivity"
             android:exported="true"
             android:theme="@style/splashTheme">
             <intent-filter>
@@ -21,11 +26,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:theme="@style/splashTheme"
-            android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:name=".view.MainActivity"
+            android:exported="true"
+            android:theme="@style/splashTheme"></activity>
     </application>
 
 </manifest>
