@@ -62,8 +62,10 @@ class MainActivity : AppCompatActivity(), RecyclerCityListener {
     }
 
     override fun OnRecyclerCityItemClick(view: View, city: CityModel) {
-        Toast.makeText(this, "id" + city.woeid, Toast.LENGTH_SHORT).show();
-        startActivity(Intent(this, CityWeatherActivity::class.java))
+        val intent = Intent(this,CityWeatherActivity::class.java)
+        intent.putExtra("id_city",city.woeid)
+        intent.putExtra("name_city",city.title)
+        startActivity(intent)
     }
 
 }
