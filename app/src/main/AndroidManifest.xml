@@ -14,7 +14,8 @@
         <activity
             android:name=".view.CityWeatherActivity"
             android:exported="true"
-            android:theme="@style/splashTheme"/>
+            android:theme="@style/splashTheme"
+            android:configChanges="orientation|screenSize"/>
         <activity
             android:name=".view.SplashActivity"
             android:exported="true"

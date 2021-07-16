@@ -75,5 +75,33 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SearchCity" />
 
+    <LinearLayout
+        android:id="@+id/progress_list_cities"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:visibility="gone"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="12dp"
+        android:paddingTop="50dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/SearchCity">
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="Recuperando ciudades..."/>
+
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

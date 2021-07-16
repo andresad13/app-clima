@@ -43,8 +43,11 @@ class MainActivity : AppCompatActivity(), RecyclerCityListener {
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
             }
             override fun afterTextChanged(p0: Editable?) {
-                if(!binding.editCity.text.toString().isEmpty())
-                setListCities(binding.editCity.text.toString())
+                if(!binding.editCity.text.toString().isEmpty()) {
+                    binding.progressListCities.visibility = View.VISIBLE
+                    setListCities(binding.editCity.text.toString())
+
+                }
             }
         })
 
@@ -53,7 +56,7 @@ class MainActivity : AppCompatActivity(), RecyclerCityListener {
     fun setListCities(str: String) {
         mainActivityViewModel.GetCities(str)!!.observe(this, Observer { serviceSetterGetter ->
             println(serviceSetterGetter.Cities)
-
+            binding.progressListCities.visibility = View.GONE
             listaCity = serviceSetterGetter.Cities
             adapter = listaCity?.let { ListCitiesAdapter(it, this) }!!
             recyclerViewCities!!.setAdapter(adapter)

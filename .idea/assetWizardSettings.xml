@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialicons/location_city/baseline_location_city_24.xml" />
+                                      <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/icons/material/materialicons/water_drop/baseline_water_drop_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,8 +28,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="7e7d7d" />
-                            <entry key="outputName" value="ic_location_city" />
+                            <entry key="color" value="1c6efa" />
+                            <entry key="outputName" value="ic_rain" />
                           </map>
                         </option>
                       </PersistentState>
